@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>게시판</title>
+	<link rel="stylesheet" href="../../web/style.css">
+</head>
+<body>
+<header>
+	<div class="head">
+		<b>IRON MAN FAN BLOG</b>
+		<div class="user">
+			<p><?= $mem_id = $this->session->userdata('mem_id');?>님</p>
+		</div>
+	</div>
+	<nav>
+		<?php if(!$mem_id){
+		?>
+		<ul class="navbar">
+			<li><a href="http://localhost/web/login/loginpage">로그인</a></li>
+			<li><a href="http://localhost/web/main/regist">회원가입</a></li>
+			<li><a href="http://localhost/web/board/get_board">게시판</a></li>
+			<li><a href="http://localhost/web/write/writepage">글쓰기</a></li>
+		</ul>
+		<?php
+		}else{
+	?>
+		<ul class="navbar">
+
+			<li><a href="https://www.youtube.com/watch?v=cb1zK7tJOXE&t=3s">유튜브</a></li>
+			<li><a href="http://localhost/web/login/logout">로그아웃</a></li>
+			<li><a href="http://localhost/web/board/get_board">게시판</a></li>
+			<li><a href="http://localhost/web/write/writepage">글쓰기</a></li>
+		</ul>
+
+		<?php
+}
+?>
+	</nav>
+</header>
+<main>
+	<h1>게시판</h1>
+	<div class="container">
+		<table class="list">
+			<thead>
+			<tr>
+				<th scope="col" class="th-num">번호</th>
+				<th scope="col" class="th-tile">제목</th>
+				<th scope="col" class="th-write">작성자</th>
+				<th scope="col" class="th-date">등록일</th>
+			</tr>
+			</thead>
+			<tbody>
+			<?php foreach($posts as $post): ?>
+			<tr>
+				<td><?php echo $post->board_num; ?></td>
+				<th><a href="http://localhost/web/board/detail_board/<?php echo $post->board_num; ?>"><?php echo $post->title; ?></a></th>
+				<td><?php echo $post->writer; ?></td>
+				<td><?php echo $post->board_date; ?></td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+
+</main>
+
+
+</body>
+</html>

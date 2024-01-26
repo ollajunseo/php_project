@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>main</title>
+	<link rel="stylesheet" href="../../web/style.css">
+</head>
+<body>
+<header>
+	<div class="head">
+		<b>IRON MAN FAN BLOG</b>
+		<div class="user">
+			<p><?= $mem_id = $this->session->userdata('mem_id');?>님</p>
+		</div>
+	</div>
+	<nav>
+		<?php if(!$mem_id){
+		?>
+		<ul class="navbar">
+			<li><a href="http://localhost/web/login/loginpage">로그인</a></li>
+			<li><a href="http://localhost/web/main/regist">회원가입</a></li>
+			<li><a href="<?php echo('board/get_board')?>">게시판</a></li>
+			<li><a href="<?php echo('write/writepage')?>">글쓰기</a></li>
+		</ul>
+		<?php
+		}else{
+	?>
+		<ul class="navbar">
+
+			<li><a href="https://www.youtube.com/watch?v=cb1zK7tJOXE&t=3s">유튜브</a></li>
+			<li><a href="<?php echo('login/logout')?>">로그아웃</a></li>
+			<li><a href="<?php echo('board/get_board')?>">게시판</a></li>
+			<li><a href="<?php echo('write/writepage')?>">글쓰기</a></li>
+		</ul>
+
+		<?php
+}
+?>
+	</nav>
+</header>
+<main>
+	<div class="main"></div>
+</main>
+<footer>
+	<div>
+		<P>COPYRIGHT</P>
+		<p>made by junseo</p>
+	</div>
+</footer>
+
+</body>
+</html>

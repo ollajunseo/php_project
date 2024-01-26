@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>글쓰기</title>
+
+	<style>
+		.head{
+			text-align: center;
+			font-size: 30px;
+			margin-top: 30px;
+		}
+
+		.navbar{
+
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			margin-top: 20px;
+		}
+		nav li {
+
+			display: inline;
+			float: left;
+
+		}
+
+		li a {
+			background-color: rgba(241, 72, 72, 0.5);
+			display: block;
+			padding: 8px;
+			text-decoration: none;
+			color:black;
+			font-weight: bold;
+			text-align: center;
+			width:615px;
+			height: 25px;
+			font-size: 16px;
+
+		}
+		li a:hover{
+			color: white;
+			background-color: rgb(179, 1, 1);
+		}
+
+		.main{
+			background-image: url('./views/ironman.jpg');
+			background-size: cover;
+			width: 2524px;
+			height: 1080px;
+		}
+
+		footer p {
+			text-align: center;
+		}
+		.login{
+			position: relative;
+
+		}
+		.form_form{
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			margin: 300px 0 0 -100px;
+			border-radius: 10px;
+			width: 300px;
+			height: 500px;
+			background-color: rgb(162, 162, 250);
+			box-shadow: 5px 5px 5px 5px gray;
+		}
+		.id{
+			list-style-type: none;
+			font-size: 20px;
+			margin: 30px 0 0 -20px;
+
+		}
+		.pass{
+			margin-left:-50px;
+			list-style-type: none;
+			margin: 40px 0 0 -30px;
+			font-size: 20px;
+		}
+		.nm{
+			margin-left:-50px;
+			list-style-type: none;
+			margin: 40px 0 0 -50px;
+			font-size: 20px;
+		}
+		.text{
+			font-size: 30px;
+		}
+		#id_id{
+			border-style: none;
+			box-shadow: 2px 2px 2px 2px gray;
+			width: 200px;
+			height: 23px;
+			border-radius: 10px;
+		}
+		#nmnm{
+			border-style: none;
+			box-shadow: 2px 2px 2px 2px gray;
+			width: 200px;
+			height: 23px;
+			border-radius: 10px;
+		}
+		#pass_pass{
+			width: 200px;
+			height: 23px;
+			border-radius: 10px;
+			box-shadow: 2px 2px 2px 2px gray;
+			border-style: none;
+		}
+		.endlogin{
+			margin: 250px 0 0 0;
+			background-color: rgb(88, 236, 255);
+			font-weight: bold;
+			border-radius: 10px;
+			width: 100px;
+			height: 35px;
+			border-style: none;
+			box-shadow: 2px 2px 2px 2px gray;
+		}
+		.endlogin2{
+			margin: 170px 0 0 0;
+			background-color: rgb(88, 236, 255);
+			font-weight: bold;
+			border-radius: 10px;
+			width: 100px;
+			height: 35px;
+			border-style: none;
+			box-shadow: 2px 2px 2px 2px gray;
+		}
+		.endlogin2:hover{
+			width: 110px;
+			height: 37px;
+			color: white;
+		}
+		table{
+			border-collapse: collapse;
+			border-spacing:0;
+		}
+		h1{
+			color: gray;
+			text-align: center;
+			margin-top: 200px;
+		}
+		.list{
+			font-size: 13px;
+			width: 100%;
+			border-top: 1px solid #ccc;
+		}
+		.list .th-num {
+
+			width: 300px;
+			text-align: center;
+		}
+		.list .th-date {
+			width: 200px;
+		}
+		.list th, .list td {
+			padding: 14px 0;
+		}
+		.list tbody td {
+			border-top: 1px solid #e7e7e7;
+			text-align: center;
+		}
+		.list tbody th {
+
+			padding-left: 28px;
+			padding-right: 14px;
+			border-top: 1px solid #e7e7e7;
+			text-align: left;
+		}
+		.list tbody th p{
+
+			display: none;
+		}
+		.write_detail{
+			display: flex;
+		}
+		.left{
+
+			flex: 1;
+		}
+		.center{
+			display: flex;
+			flex-direction: column;
+			flex: 4;
+			height: 700px;
+		}
+		.right{
+
+			flex: 1;
+		}
+		.center-top{
+
+			flex: 1;
+
+		}
+		.center-bottom{
+			flex: 6;
+
+		}
+		#write_title{
+			width: 800px;
+			height:20px;
+		}
+		#write_btn{
+			width: 100px;
+			height: 40px;
+			margin:auto;
+			background-color: rgb(250, 100, 80);
+			color: white;
+			border-radius: 20px;
+			box-shadow: 2px 2px 2px 2px gray;
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="head">
+		<b>IRON MAN FAN BLOG</b>
+		<div class="user">
+			<p><?= $mem_id = $this->session->userdata('mem_id');?>님</p>
+
+		</div>
+	</div>
+	<nav>
+		<?php if(!$mem_id){
+		?>
+		<ul class="navbar">
+			<li><a href="http://localhost/web/login/loginpage">로그인</a></li>
+			<li><a href="http://localhost/web/main/regist">회원가입</a></li>
+			<li><a href="http://localhost/web/board/get_board">게시판</a></li>
+			<li><a href="http://localhost/web/write/writepage">글쓰기</a></li>
+		</ul>
+		<?php
+		}else{
+	?>
+		<ul class="navbar">
+
+			<li><a href="https://www.youtube.com/watch?v=cb1zK7tJOXE&t=3s">유튜브</a></li>
+			<li><a href="http://localhost/web/login/logout">로그아웃</a></li>
+			<li><a href="http://localhost/web/board/get_board">게시판</a></li>
+			<li><a href="http://localhost/web/write/writepage">글쓰기</a></li>
+		</ul>
+
+		<?php
+}
+?>
+	</nav>
+</header>
+<main>
+	<h1>내용</h1>
+	<form action="">
+		<div class="write_detail">
+			<div class="left"></div>
+			<div class="center">
+				<form action="">
+					<div class="center-top">
+						<b class="text2">제목:</b>
+						<input type="text" name="title" id="write_title" value="<?php echo $post->title; ?>">
+						<b class="text2">작성자</b>
+						<input type="text" name="writer" id="write_writer" value="<?php echo $post->writer; ?>">
+						<b class="text2">번호</b>
+						<input type="text" name="board_num" id="num_writer" value="<?php echo $post->board_num; ?>">
+					</div>
+					<div class="center-bottom">
+						<b class="text3">내용</b> <br>
+						<textarea name="contents" id="write_content" cols="300" rows="50"><?php echo $post->contents; ?></textarea>
+					</div>
+					<?php
+					if($mem_id != $post->writer) {
+					?>
+
+					<?php
+					}else{
+					?>
+					<button type="button" style="width: 100px"><a href="http://localhost/web/board/new_update/<?php echo $post->board_num; ?>">수정하기</a></button>
+				</form>
+				<form action="http://localhost/web/board/delete/<?php echo $post->board_num; ?>" method="post">
+					<button type="submit" style="width: 100px">삭제하기</button>
+				</form>
+				<?php
+					}
+					?>
+			</div>
+			<div class="right"></div>
+		</div>
+	</form>
+</main>
+</body>
+</html>
