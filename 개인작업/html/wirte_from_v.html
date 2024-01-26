@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="head"><b>IRON MAN FAN BLOG</b></div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="/html/login_v.html">로그인</a></li>
+                <li><a href="/html/signup_v.html">회원가입</a></li>
+                <li><a href="/html/board_v.html">게시판</a></li>
+                <li><a href="/html/wirte_from_v.html">글쓰기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>글쓰기</h1>
+        <form action="">
+            <div class="write_detail">
+                <div class="left"></div>
+                <div class="center">
+                    <form action="">
+                    <div class="center-top">
+                    <b class="text2">제목:</b>
+                     <input type="text" name="title" id="write_title">
+                    </div>
+                    <div class="center-bottom">
+                        <b class="text3">내용</b> <br>  
+                        <textarea name="contents" id="write_content" cols="300" rows="50"></textarea>
+                    </div>
+                    <button type="submit" id="write_btn">작성하기</button>
+                    </form> 
+                </div>
+                <div class="right"></div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

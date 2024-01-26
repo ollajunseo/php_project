@@ -1,0 +1,218 @@
+.head{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.navbar{
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 20px;
+}
+nav li {
+    
+     display: inline;
+     float: left;
+    
+}
+
+li a {
+    background-color: rgba(241, 72, 72, 0.5);
+    display: block;
+    padding: 8px;
+    text-decoration: none;    
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    width:615px;
+    height: 25px; 
+    font-size: 16px; 
+    
+}
+li a:hover{
+    color: white;
+    background-color: rgb(179, 1, 1);
+}
+
+.main{
+    background-image: url(../img/ironman.jpg);
+    background-size: cover;
+    width: 2524px;
+    height: 1080px;
+}
+
+footer p {
+    text-align: center;   
+}
+.login{
+    position: relative;
+    
+}
+.form_form{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin: 300px 0 0 -100px;
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: rgb(162, 162, 250);
+    box-shadow: 5px 5px 5px 5px gray;
+}
+.id{
+    list-style-type: none;
+    font-size: 20px;
+    margin: 30px 0 0 -20px;
+
+}
+.pass{
+    margin-left:-50px;
+    list-style-type: none;
+    margin: 40px 0 0 -30px;
+    font-size: 20px;
+}
+.nm{
+    margin-left:-50px;
+    list-style-type: none;
+    margin: 40px 0 0 -50px;
+    font-size: 20px;
+}
+.text{
+    font-size: 30px;
+}
+#id_id{
+    border-style: none;
+    box-shadow: 2px 2px 2px 2px gray;
+    width: 200px;
+    height: 23px;
+    border-radius: 10px;
+}
+#nmnm{
+    border-style: none;
+    box-shadow: 2px 2px 2px 2px gray;
+    width: 200px;
+    height: 23px;
+    border-radius: 10px;
+}
+#pass_pass{
+    width: 200px;
+    height: 23px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-style: none;
+}
+.endlogin{
+    margin: 250px 0 0 0;
+    background-color: rgb(88, 236, 255);
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    border-style: none;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.endlogin2{
+    margin: 170px 0 0 0;
+    background-color: rgb(88, 236, 255);
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    border-style: none;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.endlogin:hover{
+    width: 110px;
+    height: 37px;
+    color: white;
+}
+table{
+    border-collapse: collapse;
+    border-spacing:0;
+}
+h1{
+    color: gray;
+    text-align: center;
+    margin-top: 200px;
+}
+.list{
+    font-size: 13px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+.list .th-num {
+   
+    width: 300px;
+    text-align: center;
+}
+.list .th-date {
+    width: 200px;
+}
+.list th, .list td {
+    padding: 14px 0;
+}
+.list tbody td {
+    border-top: 1px solid #e7e7e7;
+    text-align: center;
+}
+.list tbody th {
+   
+    padding-left: 28px;
+    padding-right: 14px;
+    border-top: 1px solid #e7e7e7;
+    text-align: left;
+}
+.list tbody th p{
+    
+    display: none;
+}
+.write_detail{
+    display: flex;
+}
+.left{
+    
+    flex: 1;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    height: 700px;
+}
+.right{
+    
+    flex: 1;
+}
+.center-top{
+    
+    flex: 1;
+
+}
+.center-bottom{
+    flex: 6;
+    
+}
+#write_title{
+    width: 800px;
+    height:20px;
+}
+#write_btn{
+    width: 100px;
+    height: 40px;
+    margin:auto;
+    background-color: rgb(250, 100, 80);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px gray;
+
+}
+.user{
+    margin-left: 1600px;
+    font-size: 20px;
+    margin-top: -5px;
+}
+
